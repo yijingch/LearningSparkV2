@@ -12,6 +12,9 @@ schema = StructType([
    StructField("Hits", IntegerType(), False),
    StructField("Campaigns", ArrayType(StringType()), False)])
 
+# alternatively, I can also define the schema using
+schema = "`Id` INT, `First` STRING, `Last` STRING, `Url` STRING, `Published` STRING, `Hits` INT, `Campaigns` ARRAY<STRING>"
+
 #create our data
 data = [[1, "Jules", "Damji", "https://tinyurl.1", "1/4/2016", 4535, ["twitter", "LinkedIn"]],
        [2, "Brooke","Wenig","https://tinyurl.2", "5/5/2018", 8908, ["twitter", "LinkedIn"]],
